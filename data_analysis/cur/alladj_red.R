@@ -1,0 +1,14 @@
+library(tidyverse)
+library(boot)
+
+source('bart_est.R')
+
+dat.temp = readRDS('dat_bart.rds')
+scale = sd(dat.temp$pm25)
+loc = mean(dat.temp$pm25)
+
+dat = readRDS('dat_bart_norm.rds') %>% filter(pm25 > (22.5-loc)/scale)
+
+est = boot(dat, bart_est, shift=1/scale, R=120, ncpus=5, parallel='multicore')
+
+saveRDS(est, 'alladj_red_est.rds')

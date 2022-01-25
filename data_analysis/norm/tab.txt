@@ -1,0 +1,17 @@
+% latex table generated in R 4.1.2 by xtable 1.8-4 package
+% Thu Dec 23 18:28:56 2021
+\begin{table}[ht]
+\centering
+\begin{tabular}{ll}
+  \hline
+Model & Estimate \\ 
+  \hline
+UF & 1.7 \\ 
+  UT & 44.5 (34.2, 54.8) \\ 
+  NF & 1.8 \\ 
+  NT & 44.1 (33.7, 54.5) \\ 
+  SF & -0.5 \\ 
+  ST & 66.3 (53.0, 79.5) \\ 
+   \hline
+\end{tabular}
+\end{table}
